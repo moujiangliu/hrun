@@ -1,0 +1,14 @@
+
+config:
+    name: 收藏-取消收藏的测试套件
+
+testcases:
+-
+    name: 收藏接口
+    testcase: testcases/favor_mtx_testcase.yml
+
+-
+    name: 取消收藏接口
+    testcase: testcases/cancel_mtx_testcase.yml
+
+

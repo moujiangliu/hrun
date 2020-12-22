@@ -1,0 +1,35 @@
+
+config:
+    name: 接口测试套件
+
+testcases:
+-
+    name: 登录的参数化测试
+    testcase: testcases/login_mtx_testcase.yml
+    parameters:
+        title-accounts-pwd-expect: ${P(data/login.csv)}
+#
+#-
+#    name: 提交订单接口
+#    testcase: testcases/order_mtx_testcase.yml
+#
+#-
+#    name: 支付订单接口
+#    testcase: testcases/payment_mtx_testcase.yml
+#
+#-
+#    name: 管理员登录接口
+#    testcase: testcases/admin_mtx_testcase.yml
+#
+#-
+#    name: 发货接口
+#    testcase: testcases/deli_mtx_testcase.yml
+#
+#-
+#    name: 收货接口
+#    testcase: testcases/collect_mtx_testcase.yml
+#
+#-
+#    name: 评论接口
+#    testcase: testcases/comment_mtx_testcase.yml
+#

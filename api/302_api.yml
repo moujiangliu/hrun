@@ -1,0 +1,13 @@
+
+name: 302接口
+
+request:
+    url: $jump_url
+    method: GET
+    allow_redirects: False
+
+validate:
+    - eq: ["status_code", 302]
+
+
+

@@ -1,0 +1,29 @@
+
+config:
+    name: 加入购物车接口测试
+
+teststeps:
+-
+    name: 调用登录成功的接口
+    api: api/login_api.yml
+
+-
+    name: 加入购物车接口
+    api: api/addcart_api.yml
+    extract:
+        - data: content.data
+
+-
+    name: 删除接口
+    api: api/deleteorder_api.yml
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+
+config:
+    name: 提交订单-支付成功的测试套件
+
+testcases:
+-
+    name: 提交订单接口
+    testcase: testcases/order_mtx_testcase.yml
+
+

@@ -1,0 +1,21 @@
+
+config:
+    name: 取消收藏接口测试
+
+teststeps:
+-
+    name: 调用登录成功的接口
+    api: api/login_api.yml
+
+-
+    name: 取消收藏
+    api: api/cancel_api.yml
+
+
+
+
+
+
+
+
+

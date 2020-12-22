@@ -1,0 +1,27 @@
+
+name: 提交订单接口
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/index.php?s=/index/buy/add.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        goods_id: 1
+        buy_type: goods
+        stock: 1
+        spec: ""
+        ids: ""
+        address_id: 1359
+        payment_id: 1
+        user_note: ""
+        site_model: 0
+
+validate:
+    - eq: ["status_code", 200]
+    - eq: [content.msg, 提交成功]
+
+
+
+

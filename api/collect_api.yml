@@ -1,0 +1,20 @@
+
+name: 管理员收货接口
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/admin.php?s=/order/collect.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        id: $order_id
+        value: $user_id
+
+validate:
+    - eq: ["status_code", 200]
+    - eq: ["content.msg", 收货成功]
+    - {"check": content.msg, "expect": 收货成功, "comparator": "eq"}
+
+
+

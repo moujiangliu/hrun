@@ -1,0 +1,6 @@
+title,accounts,pwd,expect
+登录成功,moujiang001,moujiang001,登录成功
+账号为空,,moujiang001,登录账号有误
+密码为空,moujiang001,,密码格式 6~18 个字符之间
+帐号错误,lwx,moujinag001,帐号不存在
+密码错误,moujiang001,123456,密码错误

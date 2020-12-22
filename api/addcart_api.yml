@@ -1,0 +1,19 @@
+
+name: 加入购物车接口
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/index.php?s=/index/cart/save.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        goods_id: 1
+        stock: 1
+validate:
+    - eq: ["status_code", 200]
+    - eq: ["content.msg", 加入成功]
+    - {"check": content.msg, "expect": 加入成功, "comparator": "eq"}
+
+
+

@@ -1,0 +1,22 @@
+
+name: 管理员发货接口
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/admin.php?s=/order/delivery.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        express_number: 22222222
+        id: $order_id
+        express_id: 1
+        user_id: $user_id
+
+validate:
+    - eq: ["status_code", 200]
+    - eq: ["content.msg", 发货成功]
+    - {"check": content.msg, "expect": 发货成功, "comparator": "eq"}
+
+
+

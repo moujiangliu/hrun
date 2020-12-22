@@ -1,0 +1,19 @@
+
+name: 取消收藏接口
+base_url: ${ENV(BASE_URL)}
+
+request:
+    url: /mtx/index.php?s=/index/goods/favor.html
+    method: POST
+    headers:
+        X-Requested-With: XMLHttpRequest
+    data:
+        id: 1
+
+validate:
+    - eq: ["status_code", 200]
+    - eq: ["content.msg", 取消成功]
+    - {"check": content.msg, "expect": 取消成功, "comparator": "eq"}
+
+
+

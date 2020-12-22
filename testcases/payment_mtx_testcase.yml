@@ -1,0 +1,31 @@
+
+config:
+    name: 支付订单接口测试
+
+teststeps:
+-
+    name: 调用成功登录接口
+    api: api/login_api.yml
+
+-
+    name: 提交订单接口测试
+    api: api/order_api.yml
+    extract:
+        - jump_url: content.data.jump_url
+
+-
+    name: 调用302接口
+    api: api/302_api.yml
+    extract:
+        - location: headers.Location
+
+-
+    name: 支付成功接口测试
+    api: api/payment_api.yml
+
+
+
+
+
+
+

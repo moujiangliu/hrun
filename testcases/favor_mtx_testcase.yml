@@ -1,0 +1,22 @@
+
+config:
+    name: 收藏接口测试
+
+teststeps:
+-
+    name: 调用登录成功的接口
+    api: api/login_api.yml
+-
+    name: 收藏
+    api: api/favor_api.yml
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+
+config:
+    name: 发货接口测试
+
+teststeps:
+-
+    name: 用户登录成功的接口
+    api: api/login_api.yml
+
+-
+    name: 用户提交订单接口
+    api: api/order_api.yml
+    extract:
+        - jump_url: content.data.jump_url
+        - order_id: content.data.order.id
+        - user_id: content.data.order.user_id
+
+-
+    name: 禁止重定向_调用302接口
+    api: api/302_api.yml
+    extract:
+        - location: headers.Location
+
+-
+    name: 用户支付成功接口
+    api: api/payment_api.yml
+
+-
+    name: 管理员登录成功接口
+    api: api/admin_api.yml
+
+-
+    name: 管理员发货接口
+    api: api/deli_api.yml
+
+
+
+
+
+
+

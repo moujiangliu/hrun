@@ -1,0 +1,10 @@
+
+config:
+    name: 评论接口的测试套件
+
+testcases:
+-
+    name: 评论接口
+    testcase: testcases/comment_mtx_testcase.yml
+
+
